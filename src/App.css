@@ -1,5 +1,14 @@
-.App {
+body {
   text-align: center;
+  background-color: #1DB954;
+}
+
+
+.logo{
+  position: absolute;
+  left: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 .App-logo {
