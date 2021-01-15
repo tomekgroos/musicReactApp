@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Work+Sans:ital,wght@0,700;1,400&display=swap');
+
+body {
+  text-align: center;
+  background: url("img/headphones.jpg");
+  background-size: cover;
+  background-position: 100% 10%;
+  color: white;
+}
+
+
+.logo{
+  position: absolute;
+  color: white;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+}
