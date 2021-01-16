@@ -11,8 +11,48 @@ body {
 
 .logo{
   position: absolute;
+  top: 35px;
   color: white;
   left: 50px;
   width: 100px;
   height: 100px;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  font-size: 18px;
+}
+
+h1 {
+  padding: 2rem 0;
+  background-color: #1DB954;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.88rem;
+  color: #fff;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.55rem;
+}
+
+
+.App-playlist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1020px) {
+  .App-playlist {
+    align-items: center;
+    flex-direction: column;
+  }
 }
