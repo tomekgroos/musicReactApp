@@ -5,6 +5,7 @@ import Logo from '../img/logo white.png';
 import PlayList from "../PlayList/PlayList";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
+import Spotify from "../../util/Spotify";
 
 class App extends React.Component {
 
@@ -66,7 +67,11 @@ addTrack (track) {
   }
 
   search(term){
-    console.log(term);
+    Spotify.search(term).then(searchResults =>{
+      this.setState({
+        searchResults: searchResults
+      })
+    })
   }
 
 render() {
