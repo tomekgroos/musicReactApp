@@ -5,6 +5,7 @@ const redirectURI = "http://localhost:3000/";
 
 
 
+
 const Spotify  = {
 
     getAccessToken(){
@@ -54,7 +55,13 @@ const Spotify  = {
         })
        
      
-    }
+    },
+
+    savePlaylist(playlistName, trackURIs) {
+    if (!playlistName || !trackURIs.length){
+        return;
+    } 
+}
 
     
 }
