@@ -14,17 +14,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchResults: [
-        {id: 1, name: "Wake me up", artist: "Avicii", album: "True"},
-      {id: 2, name: "Use Somebody", artist: "Kings Of Leon", album: "Only By The Night"},
-      {id: 3, name: "All My Life", artist: "O.S.T.R", album: "W drodze po szczescie"}
-      ],
-      playlistName: "Fav Songs",
-      playlistTracks: [
-         {id: 4, name: "Wake me up", artist: "Avicii", album: "True"},
-      {id: 5, name: "Use Somebody", artist: "Kings Of Leon", album: "Only By The Night"},
-      {id: 6, name: "All My Life", artist: "O.S.T.R", album: "W drodze po szczescie"}
-      ]
+      searchResults: [],
+      playlistName: "New Playlist",
+      playlistTracks: []
     };
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
@@ -64,6 +56,13 @@ addTrack (track) {
 
   savePlaylist(){
     const trackURIs = this.state.playlistTracks.map(track => track.uri);
+      Spotify.savePlaylist(this.state.playlistName, trackURIs).then(() =>{
+        this.setState({
+        playlistName: "New Playlist",
+        playlistTracks: []
+      })
+      })
+  
   }
 
   search(term){
@@ -88,8 +87,9 @@ render() {
       <SearchResults searchResults={this.state.searchResults}  onAdd={this.addTrack} />
       <PlayList playlistName={this.state.playlistName} 
       playlistTracks={this.state.playlistTracks} 
-      onRemove={this.removeTrack}
       onNameChange={this.updatePlaylistName}
+      onRemove={this.removeTrack}
+      
       onSave={this.savePlaylist}/>
     </div>
   </div>
