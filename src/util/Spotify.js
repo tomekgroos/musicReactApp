@@ -18,7 +18,7 @@ const Spotify = {
       accessToken = accessTokenMatch[1];
       const expiresIn = Number(expiresInMatch[1]);
       // clear the parameters
-      window.setTimeout(() => (accessToken = ""), expiresIn * 1000);
+      window.setTimeout(() => accessToken = "", expiresIn * 1000);
       window.history.pushState("Access Token", null, "/");
       return accessToken;
     } else {
@@ -28,7 +28,7 @@ const Spotify = {
   },
 
   search(term) {
-    const accessToken = Spotify.getAccessToken;
+    const accessToken = Spotify.getAccessToken();
 
     return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, {
       headers: {
@@ -66,7 +66,7 @@ const Spotify = {
       ).then(jsonResponse => {
             userID = jsonResponse.id;
 
-        return fetch(`https://api.spotify.com//v1/users/${userID}/playlists`, {
+        return fetch(`https://api.spotify.com/v1/users/${userID}/playlists`, {
           headers: headers,
           method: "POST",
           body: JSON.stringify({ name: playlistName }),
@@ -76,7 +76,7 @@ const Spotify = {
              const playlistID = jsonResponse.id;
 
             return fetch(
-              `https://api.spotify.com//v1/users/${userID}/playlists/${playlistID}/tracks`,
+              `https://api.spotify.com/v1/users/${userID}/playlists/${playlistID}/tracks`,
               {
                 headers: headers,
                 method: "POST",
