@@ -56,13 +56,23 @@ addTrack (track) {
 
   savePlaylist(){
     const trackURIs = this.state.playlistTracks.map(track => track.uri);
-      Spotify.savePlaylist(this.state.playlistName, trackURIs).then(() =>{
+
+    if (this.state.playlistTracks.length === 0){
+      console.log("empty playlist")
+      return;
+    } else {
+        Spotify.savePlaylist(this.state.playlistName, trackURIs).then(() =>{
         this.setState({
         playlistName: "New Playlist",
         playlistTracks: []
       })
-      })
-  
+      })  
+      console.log("playlist saved");
+    }
+
+      
+      
+      
   }
 
   search(term){
@@ -89,7 +99,6 @@ render() {
       playlistTracks={this.state.playlistTracks} 
       onNameChange={this.updatePlaylistName}
       onRemove={this.removeTrack}
-      
       onSave={this.savePlaylist}/>
     </div>
   </div>
