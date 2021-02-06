@@ -1,7 +1,7 @@
 
 
 const clientID = "45fb4769cf2145f694dc307366a8545f";
-const redirectURI = "http://localhost:3000/";
+const redirectURI = "https://tomekgroos.github.io/musicReactApp/";
 let accessToken;
 
 const Spotify = {
