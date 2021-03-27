@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/musicReactApp/static/css/main.2d7f84fe.chunk.css",
-    "main.js": "/musicReactApp/static/js/main.0aba7922.chunk.js",
-    "main.js.map": "/musicReactApp/static/js/main.0aba7922.chunk.js.map",
+    "main.css": "/musicReactApp/static/css/main.4ce9a8ac.chunk.css",
+    "main.js": "/musicReactApp/static/js/main.c3537b01.chunk.js",
+    "main.js.map": "/musicReactApp/static/js/main.c3537b01.chunk.js.map",
     "runtime-main.js": "/musicReactApp/static/js/runtime-main.1d722ccf.js",
     "runtime-main.js.map": "/musicReactApp/static/js/runtime-main.1d722ccf.js.map",
     "static/js/2.c8df1631.chunk.js": "/musicReactApp/static/js/2.c8df1631.chunk.js",
     "static/js/2.c8df1631.chunk.js.map": "/musicReactApp/static/js/2.c8df1631.chunk.js.map",
     "index.html": "/musicReactApp/index.html",
-    "static/css/main.2d7f84fe.chunk.css.map": "/musicReactApp/static/css/main.2d7f84fe.chunk.css.map",
+    "static/css/main.4ce9a8ac.chunk.css.map": "/musicReactApp/static/css/main.4ce9a8ac.chunk.css.map",
     "static/js/2.c8df1631.chunk.js.LICENSE.txt": "/musicReactApp/static/js/2.c8df1631.chunk.js.LICENSE.txt",
     "static/media/App.css": "/musicReactApp/static/media/headphones.ce622ad9.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1d722ccf.js",
     "static/js/2.c8df1631.chunk.js",
-    "static/css/main.2d7f84fe.chunk.css",
-    "static/js/main.0aba7922.chunk.js"
+    "static/css/main.4ce9a8ac.chunk.css",
+    "static/js/main.c3537b01.chunk.js"
   ]
 }
