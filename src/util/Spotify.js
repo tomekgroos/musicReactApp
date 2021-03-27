@@ -83,9 +83,7 @@ const Spotify = {
                 body: JSON.stringify({ uris: trackURIs })
               }
             );
-          }).catch(error => {
-            console.log(error);
-          })
+          });
       });
   }
 };

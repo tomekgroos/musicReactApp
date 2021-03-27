@@ -38,3 +38,10 @@
 .SearchButton:hover {
   background-color: #0BA732;
 }
+
+@media  screen and (max-width: 768px) {
+  .SearchBar input{
+    
+    font-size: 0.48rem;
+  }
+}

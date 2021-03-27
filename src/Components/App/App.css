@@ -30,7 +30,6 @@ html {
 
 h1 {
   padding: 2rem 0;
-  
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 1.88rem;
@@ -55,9 +54,22 @@ h2 {
   width: 100%;
 }
 
-@media only screen and (max-width: 1020px) {
+@media  screen and (max-width: 1020px) {
   .App-playlist {
     align-items: center;
     flex-direction: column;
+  }
+}
+
+@media  screen and (max-width: 768px) {
+  .logo{
+    transform: scale(0.7);
+    top: 10px;
+    left: 10px;
+  }
+  h1 {
+    text-align: right;
+    font-size: 1rem;
+    padding-right: 35px;
   }
 }
